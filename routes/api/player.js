@@ -22,9 +22,9 @@ router.get('/', async (req, res) => {
             Age: player.Age,
             Image: player.officialImageSrc,
             team: {
-              id: team.ID,
-              city: team.City,
-              name: team.Name
+              ID: team.ID,
+              City: team.City,
+              Name: team.Name
             }
           };
         })
