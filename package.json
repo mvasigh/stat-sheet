@@ -1,0 +1,16 @@
+{
+  "name": "hoops-player-comp-react",
+  "version": "1.0.0",
+  "description": "Basketball player stats comparison tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mehdi Vasigh",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "btoa": "^1.2.1",
+    "express": "^4.16.3"
+  }
+}
