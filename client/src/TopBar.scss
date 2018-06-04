@@ -1,0 +1,15 @@
+.TopBar {
+  background-color: #333;
+  color: #fafafa;
+  text-align: center;
+
+  &-logo {
+    display: inline-block;
+    padding: 1rem 1.2rem;
+  }
+
+  &-item {
+    display: inline-block;
+    padding: 1rem 1.2rem;
+  }
+}
