@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-import TopBar from './TopBar';
-import PlayerComparison from './PlayerComparison';
+import TopBar from './components/TopBar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <TopBar />
-        <PlayerComparison>
-        </PlayerComparison>          
       </div>
     );
   }
