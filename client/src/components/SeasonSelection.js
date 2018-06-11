@@ -1,16 +1,8 @@
 import React from 'react';
+import { all } from '../config/seasons';
 
 const SeasonSelection = ({
-  allSeasons = [
-    {
-      name: 'hello',
-      label: 'world'
-    },
-    {
-      name: 'test',
-      label: 'run'
-    }
-  ],
+  allSeasons = all,
   selectedSeason = '',
   onSeasonChange = f => console.log(f)
 }) => {
