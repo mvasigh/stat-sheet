@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PlayerStats = () => {
-  return <div />;
+const PlayerStats = ({ stats }) => {
+  return <div>{JSON.stringify(stats)}</div>;
 };
 
 export default PlayerStats;
