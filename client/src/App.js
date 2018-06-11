@@ -8,10 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSeason: {
-        name: '2018-playoff',
-        label: '2018 Playoffs'
-      },
+      selectedSeason: '2018-playoff',
       activeSlot: 1,
       players: Array(2)
     };
@@ -24,13 +21,14 @@ class App extends Component {
   async handlePlayerSearch(playerName) {
     const { players, activeSlot } = this.state;
     const player = await this.getPlayer(playerName);
-    players[activeSlot] = player;
+    players[activeSlot - 1] = player;
     console.log(players);
     this.setState({ players });
   }
-  getPlayer(player, season = this.state.selectedSeason.name) {
+  getPlayer(player, season = this.state.selectedSeason) {
     return fetch(`/api/season/${season}/player/${player}`)
       .then(response => response.json())
+      .then(player => ({ ...player, season }))
       .catch(e => console.log(e));
   }
   render() {
