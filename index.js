@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // ROUTES CONFIG
 // ==============
-app.use('/season/:seasonName/player', playerRoutes);
+app.use('/api/season/:seasonName/player', playerRoutes);
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname + '/client/build/index.html'))
 );
