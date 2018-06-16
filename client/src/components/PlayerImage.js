@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PlayerImage = ({ src, alt }) => {
+import './PlayerImage.css';
+
+const PlayerImage = ({ src, colors }) => {
   return (
-    <div className="player-image">
-      <img src={src} alt={alt} />
-    </div>
+    <div
+      className="player-image"
+      style={{
+        backgroundImage: `url(${src})`,
+        backgroundColor: colors.primary
+      }}
+    />
   );
 };
 
