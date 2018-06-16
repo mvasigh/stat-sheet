@@ -1,6 +1,8 @@
 import React from 'react';
 import PlayerView from './PlayerView';
 
+import './PlayerComparison.css';
+
 const PlayerComparison = ({ players = [] }) => {
   return (
     <div className="player-comparison">

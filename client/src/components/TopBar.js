@@ -2,6 +2,8 @@ import React from 'react';
 import SeasonSelection from './SeasonSelection';
 import PlayerSearch from './PlayerSearch';
 
+import './TopBar.css';
+
 const TopBar = ({ selectedSeason, onSeasonChange, onPlayerSearch }) => {
   return (
     <div className="top-bar">
