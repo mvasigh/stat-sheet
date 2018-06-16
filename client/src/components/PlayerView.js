@@ -3,22 +3,17 @@ import PlayerImage from './PlayerImage';
 import PlayerInfo from './PlayerInfo';
 import PlayerStats from './PlayerStats';
 
-const PlayerView = ({ player }) => {
-  const { info, stats, team, season } = player;
+import './PlayerView.css';
+import data from '../data/index';
+
+const PlayerView = ({ player = {} }) => {
+  const { info, stats, season } = player;
+  const colors = data.teams.find(tm => tm.name === player.info.team.Name)
+    .colors;
   return (
     <div className="player-view">
-      <PlayerImage
-        src={info.ImageSrc}
-        alt={`${info.FirstName} ${info.LastName}`}
-      />
-      <PlayerInfo
-        number={info.JerseyNumber}
-        name={`${info.FirstName} ${info.LastName}`}
-        position={info.Position}
-        height={info.Height}
-        weight={info.Weight}
-        season={season}
-      />
+      <PlayerImage src={info.ImageSrc} colors={colors} />
+      <PlayerInfo {...info} season={season} colors={colors} />
       <PlayerStats stats={stats} />
     </div>
   );
