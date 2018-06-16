@@ -1,13 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const PlayerInfo = ({ name, number, position, height, weight, season }) => {
+import './PlayerInfo.css';
+
+const PlayerInfo = ({
+  FirstName,
+  LastName,
+  JerseyNumber,
+  Position,
+  Weight,
+  colors
+}) => {
   return (
-    <div>
-      <h1>
-        {position} {number} - {name}
-      </h1>
-      <p>{season}</p>
+    <div className="player-info">
+      <div
+        className="player-info__basic"
+        style={{ backgroundColor: colors.secondary }}
+      >
+        <span
+          className="player-info__number"
+          style={{ color: colors.primary }}
+        >{`#${JerseyNumber}`}</span>
+        <span className="player-info__name">{`${FirstName} ${LastName}`}</span>
+      </div>
     </div>
   );
 };
