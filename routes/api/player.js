@@ -38,16 +38,20 @@ router.get('/:playerName', async (req, res) => {
   // Get basic player info (name, team, position) and image url
   const info = await axios
     .get(`/${seasonName}/active_players.json?player=${playerName}`)
-    .then(response => response.data.activeplayers.playerentry[0].player)
+    .then(response => response.data.activeplayers.playerentry[0])
     .then(entry => ({
-      ID: entry.ID,
-      FirstName: entry.FirstName,
-      LastName: entry.LastName,
-      JerseyNumber: entry.JerseyNumber,
-      Position: entry.Position,
-      Height: entry.Height,
-      Weight: entry.Weight,
-      ImageSrc: entry.officialImageSrc
+      ID: entry.player.ID,
+      FirstName: entry.player.FirstName,
+      LastName: entry.player.LastName,
+      JerseyNumber: entry.player.JerseyNumber,
+      Position: entry.player.Position,
+      Height: entry.player.Height,
+      Weight: entry.player.Weight,
+      ImageSrc: entry.player.officialImageSrc,
+      team: {
+        City: entry.team.City,
+        Name: entry.team.Name
+      }
     }));
 
   // Get stats for player
