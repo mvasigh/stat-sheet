@@ -19,11 +19,10 @@ class App extends Component {
     this.setState({ selectedSeason: season });
   }
   async handlePlayerSearch(playerName) {
-    const { players, activeSlot } = this.state;
-    const player = await this.getPlayer(playerName);
-    players[activeSlot - 1] = player;
-    console.log(players);
-    this.setState({ players });
+    let { players, activeSlot } = this.state;
+    players[activeSlot - 1] = await this.getPlayer(playerName);
+    activeSlot = activeSlot === 1 ? 2 : 1;
+    this.setState({ players, activeSlot });
   }
   getPlayer(player, season = this.state.selectedSeason) {
     return fetch(`/api/season/${season}/player/${player}`)
