@@ -4,7 +4,7 @@ const PlayerSearch = ({ selectedSeason, onPlayerSearch = f => f }) => {
   let _player;
   const handleSubmit = e => {
     e.preventDefault();
-    onPlayerSearch(_player.value);
+    onPlayerSearch(_player.value.toLowerCase().replace(' ', '-'));
     _player.value = '';
     _player.focus();
   };
