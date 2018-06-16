@@ -1,0 +1,19 @@
+.player-info {
+  padding: 1rem 1.8rem;
+
+  &__number {
+    display: inline-block;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.4rem;
+    padding: 0 0.5rem;
+  }
+
+  &__name {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: white;
+  }
+}
