@@ -1,3 +1,3 @@
 # Stat Sheet (Client)
 
-This is the client application for Stat Sheet, built with React and Bootstrap. 
+This is the client application for Stat Sheet, built with React.
