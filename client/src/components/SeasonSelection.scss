@@ -1,0 +1,20 @@
+.season-selection {
+  appearance: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.6rem 2.8rem 0.6rem 1.2rem;
+  border-radius: 0.2rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  transition: all 0.1s;
+  background-color: #616161;
+  color: #fafafa;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: #424242;
+    color: #fff;
+  }
+}
