@@ -7,14 +7,16 @@ import './TopBar.css';
 const TopBar = ({ selectedSeason, onSeasonChange, onPlayerSearch }) => {
   return (
     <div className="top-bar">
-      <SeasonSelection
-        selectedSeason={selectedSeason}
-        onSeasonChange={onSeasonChange}
-      />
-      <PlayerSearch
-        selectedSeason={selectedSeason}
-        onPlayerSearch={onPlayerSearch}
-      />
+      <div className="top-bar__container">
+        <SeasonSelection
+          selectedSeason={selectedSeason}
+          onSeasonChange={onSeasonChange}
+        />
+        <PlayerSearch
+          selectedSeason={selectedSeason}
+          onPlayerSearch={onPlayerSearch}
+        />
+      </div>
     </div>
   );
 };
