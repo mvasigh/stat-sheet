@@ -1,0 +1,34 @@
+.player-search {
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+
+  &__search-bar {
+    appearance: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    background-color: #616161;
+    color: #fafafa;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+
+    &:hover,
+    &:focus {
+      background-color: #424242;
+      color: #fff;
+    }
+  }
+
+  &__search-button {
+    appearance: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    background-color: #d81b60;
+    color: #f8bbd0;
+    border-radius: 0 0.2rem 0.2rem 0;
+  }
+}

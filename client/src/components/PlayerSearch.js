@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './PlayerSearch.css';
+
 const PlayerSearch = ({ selectedSeason, onPlayerSearch = f => f }) => {
   let _player;
   const handleSubmit = e => {
@@ -9,9 +11,13 @@ const PlayerSearch = ({ selectedSeason, onPlayerSearch = f => f }) => {
     _player.focus();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input ref={input => (_player = input)} type="text" />
-      <button>Search</button>
+    <form className="player-search" onSubmit={handleSubmit}>
+      <input
+        className="player-search__search-bar"
+        ref={input => (_player = input)}
+        type="text"
+      />
+      <button className="player-search__search-button">Search</button>
     </form>
   );
 };
