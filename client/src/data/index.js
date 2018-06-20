@@ -269,8 +269,66 @@ const data = {
         primary: '#002B5C',
         secondary: '#E31837'
       }
+    },
+    {
+      abbr: 'DUM',
+      city: 'Placeholder',
+      name: 'Dummy',
+      colors: {
+        primary: '#111',
+        secondary: '#222'
+      }
+    }
+  ],
+  dummyPlayer: {
+    info: {
+      FirstName: '',
+      LastName: '',
+      JerseyNumber: '',
+      Position: '',
+      Height: '',
+      Weight: '',
+      ImageSrc: '',
+      team: {
+        Name: 'Dummy'
+      }
+    },
+    stats: {},
+    season: {}
+  },
+  categories: [
+    {
+      label: 'GP',
+      comparison: 0
+    },
+    {
+      label: '3P%',
+      comparison: 0
+    },
+    {
+      label: 'FG%',
+      comparison: 0
+    },
+    {
+      label: 'REB',
+      comparison: 0
+    },
+    {
+      label: 'AST',
+      comparison: 0
+    },
+    {
+      label: 'PTS',
+      comparison: 0
     }
   ]
 };
+
+// // GP: 22
+// 3P %: 34.2
+// FG %: 53.9
+// REB: 201
+// AST: 198
+// PTS: 748
 
 export default data;
