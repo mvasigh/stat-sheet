@@ -6,7 +6,7 @@ import PlayerStats from './PlayerStats';
 import './PlayerView.css';
 import data from '../data/index';
 
-const PlayerView = ({ player = {} }) => {
+const PlayerView = ({ player = data.dummyPlayer }) => {
   const { info, stats, season } = player;
   const colors = data.teams.find(tm => tm.name === player.info.team.Name)
     .colors;
