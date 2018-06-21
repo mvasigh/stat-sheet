@@ -8,7 +8,7 @@ const StatCategory = ({ label, comparison }) => {
   return (
     <li className="stat-category">
       {comparison === 0 ? (
-        ''
+        <div />
       ) : comparison > 0 ? (
         <UpArrowIcon />
       ) : (
@@ -16,7 +16,7 @@ const StatCategory = ({ label, comparison }) => {
       )}
       <div className="stat-category__label">{label}</div>
       {comparison === 0 ? (
-        ''
+        <div />
       ) : comparison > 0 ? (
         <DownArrowIcon />
       ) : (
