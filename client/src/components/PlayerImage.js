@@ -5,13 +5,15 @@ import './PlayerImage.css';
 
 const PlayerImage = ({ src, colors }) => {
   return (
-    <div
-      className="player-image"
-      style={{
-        backgroundImage: `url(${src})`,
-        backgroundColor: colors.primary
-      }}
-    />
+    <div className="player-image">
+      <div
+        className="player-image__img"
+        style={{
+          backgroundImage: `url(${src})`,
+          backgroundColor: colors.primary
+        }}
+      />
+    </div>
   );
 };
 

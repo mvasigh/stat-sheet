@@ -1,4 +1,5 @@
 import React from 'react';
+import data from '../data';
 
 import './PlayerInfo.css';
 
@@ -8,19 +9,34 @@ const PlayerInfo = ({
   JerseyNumber,
   Position,
   Weight,
-  colors
+  team,
+  colors,
+  season
 }) => {
   return (
     <div className="player-info">
       <div
         className="player-info__basic"
-        style={{ backgroundColor: colors.secondary }}
+        style={{
+          borderTopColor: colors.secondary
+        }}
       >
         <span
           className="player-info__number"
-          style={{ color: colors.primary }}
-        >{`#${JerseyNumber}`}</span>
-        <span className="player-info__name">{`${FirstName} ${LastName}`}</span>
+          style={{
+            backgroundColor: colors.primary
+          }}
+        >
+          {JerseyNumber || ' '}
+        </span>
+        <div className="player-info__identity">
+          <span className="player-info__name">
+            {`${FirstName} ${LastName}`}
+          </span>
+          <span className="player-info__position-team">
+            {`${Position} - ${team.City} ${team.Name}`}
+          </span>
+        </div>
       </div>
     </div>
   );
