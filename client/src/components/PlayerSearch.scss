@@ -12,6 +12,7 @@
     color: #fafafa;
     padding: 0.6rem 1.2rem;
     border-radius: 0.2rem 0 0 0.2rem;
+    transition: all 0.2s;
 
     &:hover,
     &:focus {
@@ -27,8 +28,17 @@
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     padding: 0.6rem 1.2rem;
-    background-color: #d81b60;
-    color: #f8bbd0;
+    background-color: #3d5afe;
+    color: #e8eaf6;
     border-radius: 0 0.2rem 0.2rem 0;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #536dfe;
+    }
+
+    &:active {
+      background-color: #304ffe;
+    }
   }
 }

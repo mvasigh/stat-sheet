@@ -1,4 +1,9 @@
 .player-view {
   background-color: #212121;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-basis: 40%;
 }
