@@ -7,7 +7,7 @@ const PlayerStats = ({ stats }) => {
     const [category, value] = stat;
     return (
       <li className="player-stats__stat-field" key={i}>
-        {category}: {value}
+        {value}
       </li>
     );
   });

@@ -1,3 +1,11 @@
 .player-stats {
   list-style-type: none;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+
+  &__stat-field {
+    line-height: 3.2rem;
+    font-size: 1.8rem;
+  }
 }
