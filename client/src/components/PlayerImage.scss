@@ -15,5 +15,11 @@
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
     backface-visibility: hidden;
+
+    &--active {
+      border: 0.3rem solid #ffea00;
+      transform: scale(1.03);
+      box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+    }
   }
 }
