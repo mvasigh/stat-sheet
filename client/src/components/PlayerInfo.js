@@ -11,21 +11,20 @@ const PlayerInfo = ({
   Weight,
   team,
   colors,
-  season
+  season,
+  isActive
 }) => {
   return (
     <div className="player-info">
       <div
-        className="player-info__basic"
-        style={{
-          borderTopColor: colors.secondary
-        }}
+        className={
+          'player-info__basic' + (isActive ? ' player-info__basic--active' : '')
+        }
+        style={{ borderTopColor: colors.secondary }}
       >
         <span
           className="player-info__number"
-          style={{
-            backgroundColor: colors.primary
-          }}
+          style={{ backgroundColor: colors.primary }}
         >
           {JerseyNumber || ' '}
         </span>
