@@ -15,24 +15,13 @@ class App extends Component {
     };
     this.handleSeasonChange = this.handleSeasonChange.bind(this);
     this.handlePlayerSearch = this.handlePlayerSearch.bind(this);
+    this.handlePlayerSelect = this.handlePlayerSelect.bind(this);
   }
 
   componentDidMount() {
     this.getPlayersList(this.state.selectedSeason).then(playersList =>
       this.setState({ playersList })
     );
-  }
-
-  async handleSeasonChange(season) {
-    const playersList = await this.getPlayersList(season);
-    this.setState({ selectedSeason: season, playersList });
-  }
-
-  async handlePlayerSearch(playerName) {
-    let { players, activeSlot } = this.state;
-    players[activeSlot - 1] = await this.getPlayer(playerName);
-    activeSlot = activeSlot === 1 ? 2 : 1;
-    this.setState({ players, activeSlot });
   }
 
   getPlayer(player, season = this.state.selectedSeason) {
@@ -48,6 +37,22 @@ class App extends Component {
       .catch(e => console.log(e));
   }
 
+  async handleSeasonChange(season) {
+    const playersList = await this.getPlayersList(season);
+    this.setState({ selectedSeason: season, playersList });
+  }
+
+  async handlePlayerSearch(playerName) {
+    let { players, activeSlot } = this.state;
+    players[activeSlot - 1] = await this.getPlayer(playerName);
+    activeSlot = activeSlot === 1 ? 2 : 1;
+    this.setState({ players, activeSlot });
+  }
+
+  handlePlayerSelect(activeSlot) {
+    this.setState({ activeSlot });
+  }
+
   render() {
     return (
       <div className="app">
@@ -56,7 +61,11 @@ class App extends Component {
           onSeasonChange={this.handleSeasonChange}
           onPlayerSearch={this.handlePlayerSearch}
         />
-        <PlayerComparison players={this.state.players} />
+        <PlayerComparison
+          players={this.state.players}
+          activeSlot={this.state.activeSlot}
+          onPlayerSelect={this.handlePlayerSelect}
+        />
       </div>
     );
   }
