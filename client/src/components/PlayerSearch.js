@@ -16,6 +16,7 @@ const PlayerSearch = ({ selectedSeason, onPlayerSearch = f => f }) => {
         className="player-search__search-bar"
         ref={input => (_player = input)}
         type="text"
+        placeholder="Search NBA players..."
       />
       <button className="player-search__search-button">Search</button>
     </form>
